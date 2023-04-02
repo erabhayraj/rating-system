@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(182, 231, 231);
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+#headline{
+    font-size: 5rem;
+    text-align: center;
+    margin: 1rem;
+    font-family: "Sofia",sans-serif;
+}
+.disclaimer{
+    display:flex;
+    justify-content: space-around;
+}
+#newcomment{
+    width:80vw;
+    height:200px;
+    margin: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    padding: 10px;
+}
+#newcomment:focus{
+    outline: none;
+}
+#clickme{
+    padding:10px;
+    font-size:1rem;
+    border-radius: 5px;
+    border:none;
+    background-color: rgb(69, 69, 238);
+    color:white;
+    margin: 10px;
+}
+#clickme:hover{
+    background-color: blue;
+    cursor: pointer;
+}
+#rating{
+    margin:2rem 10vw
+}
+#currentrating{
+    /* margin:2rem 10vw; */
+    font-size: 3em;
+    margin-bottom: 2rem;
+}
+.checked{
+    color: orange;
+    /* font-size:2rem; */
+}
+#prevcomments{
+    margin:0 10vw;
+    border:1px solid rgb(208, 195, 195);
+    padding:10px;
+    border-radius:10px;
+    background-color: rgb(239, 228, 228);
+}
+.lastcomment{
+    
+}
+hr{
+    margin:10px 0;
+}
