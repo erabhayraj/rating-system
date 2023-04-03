@@ -15,10 +15,13 @@ var degree = {
 };
 
 function calculate(mystr) {
+    mystr=mystr.value;
+    mystr = mystr.toLowerCase();
+    console.log(mystr)
     var sum = 0;
     var count = 0;
     words.forEach(element => {
-        if (mystr.value.includes(element)) {
+        if (mystr.includes(element)) {
             count++;
             sum = sum + Number(degree[element]);
         }
@@ -35,12 +38,17 @@ function print(mystr) {
     mystr.forEach(element => {
         var newLine = document.createElement("p");
         newLine.setAttribute("class", "lastcomment");
+        element = capitalizeFirstLetter(element);
         newLine.innerHTML = element;
         var commentSection = document.getElementById("prevcomments");
         commentSection.prepend(newLine);
         var separator = document.createElement("hr");
         newLine.append(separator);
     });
+}
+
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
 function printStar(sum) {
@@ -85,7 +93,7 @@ function save(mystr){
     else
         prev = JSON.parse(prev);
     if(mystr!=="null")
-    prev.push(mystr.value);
+    prev.push(mystr);
     print(prev);
     prev = JSON.stringify(prev);
     localStorage.setItem("comments", prev);
@@ -95,4 +103,5 @@ btn.addEventListener("click", function () {
     calculate(mystr);
     mystr.value = "";
 })
+
 
