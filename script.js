@@ -17,8 +17,6 @@ var degree = {
 function calculate(mystr) {
     mystr=mystr.value;
     mystr = mystr.toLowerCase();
-    console.log(mystr);
-    console.log(mystr)
     var sum = 0;
     var count = 0;
     words.forEach(element => {
